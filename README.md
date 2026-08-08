@@ -2,6 +2,11 @@
 
 > **AI & ML Student • Aspiring Data Analyst • Power BI Developer**
 
+<p align="center">
+  <a href="https://skmushrafportfolio.netlify.app/">
+    <img src="https://img.shields.io/badge/🌐%20LIVE%20PORTFOLIO-Visit%20Website-2563EB?style=for-the-badge" alt="Live Portfolio">
+  </a>
+</p>
 A modern, responsive, and interactive personal portfolio website showcasing my journey in **Artificial Intelligence & Machine Learning, Data Analytics, Business Intelligence, and Python-based projects**.
 
 The portfolio is designed to present my skills, projects, certifications, education, and professional journey in a clean, professional, and recruiter-friendly format.
