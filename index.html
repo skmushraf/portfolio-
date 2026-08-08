@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaik Mohammad Mushraf | AI & ML Student | Data Analyst Portfolio</title>
+    <meta name="description"
+        content="Personal portfolio of Shaik Mohammad Mushraf - AI & ML Student and aspiring Data Analyst. Specializing in Python, SQL, Power BI, and Data Analytics.">
+    <meta name="keywords" content="Shaik Mohammad Mushraf, Data Analyst, AI & ML Student, Power BI, Python, SQL, Data Analytics, Portfolio">
+    <meta name="author" content="Shaik Mohammad Mushraf">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shaik Mohammad Mushraf | Data Analyst & AI Student Portfolio">
+    <meta property="og:description" content="Transforming Data into Business Decisions. Explore data analytics projects, skill matrix, and certifications.">
+    <meta property="og:url" content="https://github.com/skmushraf">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+
+<body>
+    <!-- Mouse Glow Follower -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Command Palette Modal (Ctrl + K) -->
+    <div class="cmd-palette-backdrop" id="cmdPalette">
+        <div class="cmd-palette-modal">
+            <div class="cmd-input-wrapper">
+                <i class="fas fa-search cmd-search-icon"></i>
+                <input type="text" id="cmdInput" placeholder="Type a command or search section (e.g. Projects, Skills, About)..." autocomplete="off">
+                <span class="cmd-badge">ESC</span>
+            </div>
+            <div class="cmd-results" id="cmdResults">
+                <div class="cmd-group-title">Quick Navigation</div>
+                <div class="cmd-item" data-action="nav" data-target="#home"><i class="fas fa-home"></i> Home</div>
+                <div class="cmd-item" data-action="nav" data-target="#about"><i class="fas fa-user"></i> About Me & Objective</div>
+                <div class="cmd-item" data-action="nav" data-target="#skills"><i class="fas fa-code"></i> Skills Matrix</div>
+                <div class="cmd-item" data-action="nav" data-target="#projects"><i class="fas fa-chart-line"></i> Featured Projects</div>
+                <div class="cmd-item" data-action="nav" data-target="#certifications"><i class="fas fa-certificate"></i> Certifications</div>
+                <div class="cmd-item" data-action="nav" data-target="#github"><i class="fab fa-github"></i> GitHub Feed</div>
+                <div class="cmd-item" data-action="nav" data-target="#contact"><i class="fas fa-envelope"></i> Contact / Connect</div>
+                
+                <div class="cmd-group-title">Profiles</div>
+                <div class="cmd-item" data-action="link" data-url="https://github.com/skmushraf"><i class="fab fa-github"></i> Open GitHub</div>
+                <div class="cmd-item" data-action="link" data-url="https://www.linkedin.com/in/sk-mohammad-mushraf-b070922a7"><i class="fab fa-linkedin"></i> Open LinkedIn</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-mark">S</span>
+                <span class="logo-text">Shaik Mushraf<span class="logo-dot">.</span></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#github" class="nav-link">GitHub</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="cmd-trigger-btn" id="cmdTrigger" title="Open Command Palette (Ctrl + K)">
+                    <i class="fas fa-search"></i> <span class="cmd-key-hint">⌘K</span>
+                </button>
+                <a href="#contact" class="btn-primary-glow">Get In Touch <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="hero-bg-gradients">
+            <div class="gradient-sphere sphere-1"></div>
+            <div class="gradient-sphere sphere-2"></div>
+            <div class="hero-grid-overlay"></div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-grid">
+                <div class="hero-text-col">
+                    <div class="status-badge">
+                        <span class="pulse-dot"></span> AI & ML Student & Data Analytics Learner
+                    </div>
+
+                    <h1 class="hero-title">
+                        Shaik Mohammad <br>
+                        <span class="gradient-text">Mushraf</span>
+                    </h1>
+
+                    <div class="hero-role-bar">
+                        <span class="role-tag">AI & ML Student</span>
+                        <span class="role-divider">•</span>
+                        <span class="role-tag">Aspiring Data Analyst</span>
+                        <span class="role-divider">•</span>
+                        <span class="role-tag">Power BI Developer</span>
+                    </div>
+
+                    <div class="typing-container">
+                        <span class="typing-prefix">&gt; </span>
+                        <span class="typing-text" id="typewriter"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+
+                    <p class="hero-bio">
+                        Passionate student exploring the power of data, machine learning algorithms, and business intelligence. 
+                        Building analytical projects using Python, SQL, and Power BI.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn-primary-glow">
+                            <i class="fas fa-folder-open"></i> View Projects
+                        </a>
+                        <a href="https://github.com/skmushraf" target="_blank" rel="noopener noreferrer" class="btn-glass">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/sk-mohammad-mushraf-b070922a7" target="_blank" rel="noopener noreferrer" class="btn-glass">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+
+                    <!-- Tech Stack Pills -->
+                    <div class="hero-tech-stack">
+                        <span class="stack-label">Learning Stack:</span>
+                        <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-pill"><i class="fas fa-database"></i> SQL</span>
+                        <span class="tech-pill"><i class="fas fa-chart-bar"></i> Power BI</span>
+                        <span class="tech-pill"><i class="fas fa-file-excel"></i> Excel</span>
+                        <span class="tech-pill"><i class="fas fa-brain"></i> Machine Learning</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual-col">
+                    <div class="avatar-card-wrapper">
+                        <div class="avatar-card glass-panel">
+                            <div class="avatar-img-container">
+                                <img src="profile.jpg" alt="Shaik Mohammad Mushraf" class="avatar-img" onerror="this.src='https://via.placeholder.com/400x400?text=Shaik+Mohammad+Mushraf'">
+                                <div class="avatar-glow-ring"></div>
+                            </div>
+                            
+                            <!-- Floating Badge 1 -->
+                            <div class="floating-card badge-top-right">
+                                <div class="badge-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="badge-text">
+                                    <span class="badge-val">AI & ML</span>
+                                    <span class="badge-lbl">Student</span>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge 2 -->
+                            <div class="floating-card badge-bottom-left">
+                                <div class="badge-icon gold"><i class="fas fa-award"></i></div>
+                                <div class="badge-text">
+                                    <span class="badge-val">Deloitte</span>
+                                    <span class="badge-lbl">Job Simulation Cert</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="hero-stats-grid">
+                <div class="stat-card glass-panel">
+                    <div class="stat-num" data-counter="5" data-suffix="+">0</div>
+                    <div class="stat-lbl">Analytics Projects</div>
+                    <div class="stat-sub">Power BI & Python</div>
+                </div>
+                <div class="stat-card glass-panel">
+                    <div class="stat-num" data-counter="5" data-suffix="+">0</div>
+                    <div class="stat-lbl">Certifications</div>
+                    <div class="stat-sub">3Skill, Deloitte, Cisco & AI</div>
+                </div>
+                <div class="stat-card glass-panel">
+                    <div class="stat-num" data-counter="10" data-suffix="M+">0</div>
+                    <div class="stat-lbl">Data Rows Analyzed</div>
+                    <div class="stat-sub">SQL & Data Pipelines</div>
+                </div>
+                <div class="stat-card glass-panel">
+                    <div class="stat-num" data-counter="100" data-suffix="%">0</div>
+                    <div class="stat-lbl">Learning Dedication</div>
+                    <div class="stat-sub">Growth & Continuous Practice</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#about" class="scroll-down-btn" aria-label="Scroll Down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+
+    <!-- 2. About Me & Objective Section -->
+    <section id="about" class="section-padding about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">BIOGRAPHY & CAREER OBJECTIVE</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-story-col">
+                    <!-- Career Objective Box -->
+                    <div class="objective-card glass-panel">
+                        <div class="obj-header">
+                            <i class="fas fa-bullseye gradient-icon"></i>
+                            <h3>Career Objective</h3>
+                        </div>
+                        <p class="obj-text">
+                            An ambitious <strong>AI & ML Student</strong> and aspiring <strong>Data Analyst</strong> dedicated to mastering 
+                            Python, SQL, Power BI, and Data Analytics. Passionate about uncovering insights from complex datasets, building 
+                            intuitive visual intelligence systems, and continually expanding analytical and machine learning capabilities for 
+                            future real-world impact.
+                        </p>
+                    </div>
+
+                    <!-- Personal Journey & Background -->
+                    <div class="glass-panel story-card">
+                        <h3><i class="fas fa-user-astronaut gradient-icon"></i> My Learning Journey</h3>
+                        <p>
+                            Hi! I am <strong>Shaik Mohammad Mushraf</strong>, an AI & ML student based in India with a strong fascination for 
+                            how data shapes business decisions.
+                        </p>
+                        <p>
+                            I view data analysis not just as an academic subject, but as a discipline of storytelling. Through coursework, 
+                            independent projects, and practical simulations (such as the Deloitte Data Analytics Simulation), I actively apply 
+                            SQL querying, Power BI DAX modeling, and Python exploratory data analysis to solve real-world problems.
+                        </p>
+
+                        <div class="why-hire-box">
+                            <h4><i class="fas fa-lightbulb"></i> Core Areas of Interest:</h4>
+                            <ul class="check-list">
+                                <li><i class="fas fa-check-circle"></i> <strong>Data Cleaning & Transformation:</strong> Structuring raw datasets into clean SQL schemas.</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Business Intelligence:</strong> Designing interactive Power BI dashboards with DAX metrics.</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Machine Learning Foundations:</strong> Exploring Python (Pandas, NumPy, Scikit-learn) for predictive analytics.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-timeline-col">
+                    <h3 class="timeline-heading"><i class="fas fa-stream gradient-icon"></i> Education & Milestones</h3>
+                    
+                    <div class="timeline-wrapper">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content glass-panel">
+                                <span class="timeline-date">Current</span>
+                                <h4>AI & Machine Learning Specialization</h4>
+                                <p class="timeline-org">Student & Researcher</p>
+                                <p class="timeline-desc">Studying Artificial Intelligence, Machine Learning algorithms, Python programming, and Data Analysis.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content glass-panel">
+                                <span class="timeline-date">2 Month Internship</span>
+                                <h4>Data Analytics Intern</h4>
+                                <p class="timeline-org">3Skill Training &bull; Cert ID: ID-INTERN260721</p>
+                                <p class="timeline-desc">Completed 2-month practical data analytics internship emphasizing hands-on skills, project-based learning, and industry data workflows.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content glass-panel">
+                                <span class="timeline-date">April 2026</span>
+                                <h4>Deloitte Data Analytics Simulation</h4>
+                                <p class="timeline-org">Deloitte & Forage</p>
+                                <p class="timeline-desc">Completed practical tasks in forensic technology, customer segmentation, data cleaning, and executive data presentation.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content glass-panel">
+                                <span class="timeline-date">05 Jul 2026</span>
+                                <h4>Cisco Data Analytics Essentials</h4>
+                                <p class="timeline-org">Cisco Networking Academy</p>
+                                <p class="timeline-desc">Learned data collection pipelines, ETL processes, network data metrics, and visual storytelling.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Skills Section -->
+    <section id="skills" class="section-padding skills-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">TECHNICAL PROFICIENCY</span>
+                <h2 class="section-title">Skill <span class="gradient-text">Matrix</span></h2>
+                <p class="section-desc">Key tools, technologies, and analytical concepts I am actively mastering.</p>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="skills-categories-grid">
+                <!-- Category 1: Programming -->
+                <div class="skill-category-card glass-panel">
+                    <div class="cat-header">
+                        <i class="fas fa-code cat-icon"></i>
+                        <h3>Programming & Querying</h3>
+                    </div>
+                    
+                    <div class="skill-bar-item">
+                        <div class="skill-info">
+                            <span><i class="fab fa-python skill-icon"></i> Python (Pandas, NumPy)</span>
+                            <span class="skill-pct">90%</span>
+                        </div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                    </div>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-info">
+                            <span><i class="fas fa-database skill-icon"></i> SQL (PostgreSQL, MySQL)</span>
+                            <span class="skill-pct">88%</span>
+                        </div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
+                    </div>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-info">
+                            <span><i class="fas fa-terminal skill-icon"></i> Git & Version Control</span>
+                            <span class="skill-pct">85%</span>
+                        </div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Data Analysis & BI -->
+                <div class="skill-category-card glass-panel">
+                    <div class="cat-header">
+                        <i class="fas fa-chart-pie cat-icon"></i>
+                        <h3>Business Intelligence & Analytics</h3>
+                    </div>
+                    
+                    <div class="skill-bar-item">
+                        <div class="skill-info">
+                            <span><i class="fas fa-chart-bar skill-icon"></i> Power BI (DAX, Power Query)</span>
+                            <span class="skill-pct">92%</span>
+                        </div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
+                    </div>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-info">
+                            <span><i class="fas fa-file-excel skill-icon"></i> Advanced Excel</span>
+                            <span class="skill-pct">90%</span>
+                        </div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                    </div>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-info">
+                            <span><i class="fas fa-project-diagram skill-icon"></i> Data Modeling & ETL</span>
+                            <span class="skill-pct">86%</span>
+                        </div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 86%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Visualization & AI -->
+                <div class="skill-category-card glass-panel">
+                    <div class="cat-header">
+                        <i class="fas fa-brain cat-icon"></i>
+                        <h3>Visualization & AI Foundations</h3>
+                    </div>
+                    
+                    <div class="skill-bar-item">
+                        <div class="skill-info">
+                            <span><i class="fas fa-paint-brush skill-icon"></i> Data Storytelling & Dashboards</span>
+                            <span class="skill-pct">92%</span>
+                        </div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
+                    </div>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-info">
+                            <span><i class="fas fa-robot skill-icon"></i> Machine Learning Concepts</span>
+                            <span class="skill-pct">82%</span>
+                        </div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 82%;"></div></div>
+                    </div>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-info">
+                            <span><i class="fas fa-calculator skill-icon"></i> Statistical EDA</span>
+                            <span class="skill-pct">85%</span>
+                        </div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Soft Skills -->
+                <div class="skill-category-card glass-panel">
+                    <div class="cat-header">
+                        <i class="fas fa-lightbulb cat-icon"></i>
+                        <h3>Analytical Soft Skills</h3>
+                    </div>
+                    
+                    <div class="skill-bar-item">
+                        <div class="skill-info">
+                            <span><i class="fas fa-puzzle-piece skill-icon"></i> Problem Solving</span>
+                            <span class="skill-pct">95%</span>
+                        </div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 95%;"></div></div>
+                    </div>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-info">
+                            <span><i class="fas fa-comments skill-icon"></i> Presentation & Communication</span>
+                            <span class="skill-pct">90%</span>
+                        </div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                    </div>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-info">
+                            <span><i class="fas fa-microscope skill-icon"></i> Critical Thinking</span>
+                            <span class="skill-pct">92%</span>
+                        </div>
+                        <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Featured Projects Section (Case Studies) -->
+    <section id="projects" class="section-padding projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">PROJECT PORTFOLIO</span>
+                <h2 class="section-title">Featured Analytics <span class="gradient-text">Projects</span></h2>
+                <p class="section-desc">Independent and coursework projects demonstrating analytical and data visualization skills.</p>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="projects-list">
+                <!-- Project 1: ECommerce Sales Analysis -->
+                <div class="project-card glass-panel">
+                    <div class="project-grid">
+                        <div class="project-info-col">
+                            <span class="project-tag">E-Commerce Analytics</span>
+                            <h3 class="project-title">ECommerce Sales Analysis Dashboard</h3>
+                            
+                            <p class="project-summary">
+                                Interactive Power BI dashboard analyzing ₹49.38M+ in total sales across Indian states, evaluating customer payment 
+                                preferences (COD, UPI, Net Banking), and tracking top-performing product categories.
+                            </p>
+
+                            <div class="project-metrics-row">
+                                <div class="metric-badge">
+                                    <span class="m-val">₹49.38M</span>
+                                    <span class="m-lbl">Total Sales</span>
+                                </div>
+                                <div class="metric-badge">
+                                    <span class="m-val">₹7.38M</span>
+                                    <span class="m-lbl">Total Profit</span>
+                                </div>
+                                <div class="metric-badge">
+                                    <span class="m-val">7.2M</span>
+                                    <span class="m-lbl">Top State (Rajasthan)</span>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span>Power BI</span>
+                                <span>DAX</span>
+                                <span>SQL</span>
+                                <span>Category Analytics</span>
+                                <span>Payment Insights</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <button class="btn-primary-glow btn-sm open-case-study" data-project="project-1">
+                                    <i class="fas fa-file-alt"></i> Read Case Study
+                                </button>
+                                <a href="https://github.com/skmushraf" target="_blank" class="btn-glass btn-sm">
+                                    <i class="fab fa-github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-preview-col">
+                            <div class="project-img-wrapper" data-project="project-1">
+                                <div class="chart-canvas-preview">
+                                    <canvas id="project1Chart"></canvas>
+                                </div>
+                                <div class="project-hover-overlay">
+                                    <span><i class="fas fa-search-plus"></i> View Dashboard Details</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Sales Performance Tracker -->
+                <div class="project-card glass-panel">
+                    <div class="project-grid reverse">
+                        <div class="project-info-col">
+                            <span class="project-tag">Enterprise Sales & Finance</span>
+                            <h3 class="project-title">Sales Performance Tracker Dashboard</h3>
+                            
+                            <p class="project-summary">
+                                Comprehensive Power BI dashboard tracking $14.92M in global sales, segment profitability (Corporate leading with $0.6M), 
+                                regional sales distribution (West leading at ~35%), and monthly sales trends.
+                            </p>
+
+                            <div class="project-metrics-row">
+                                <div class="metric-badge">
+                                    <span class="m-val">$14.92M</span>
+                                    <span class="m-lbl">Total Sales</span>
+                                </div>
+                                <div class="metric-badge">
+                                    <span class="m-val">$1.52M</span>
+                                    <span class="m-lbl">Total Profit</span>
+                                </div>
+                                <div class="metric-badge">
+                                    <span class="m-val">$0.6M</span>
+                                    <span class="m-lbl">Corporate Segment Profit</span>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span>Power BI</span>
+                                <span>DAX</span>
+                                <span>Segment Analytics</span>
+                                <span>Regional Mapping</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <button class="btn-primary-glow btn-sm open-case-study" data-project="project-2">
+                                    <i class="fas fa-file-alt"></i> Read Case Study
+                                </button>
+                                <a href="https://github.com/skmushraf" target="_blank" class="btn-glass btn-sm">
+                                    <i class="fab fa-github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-preview-col">
+                            <div class="project-img-wrapper" data-project="project-2">
+                                <div class="chart-canvas-preview">
+                                    <canvas id="project2Chart"></canvas>
+                                </div>
+                                <div class="project-hover-overlay">
+                                    <span><i class="fas fa-search-plus"></i> View Dashboard Details</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Supply Chain & Logistics Analytics -->
+                <div class="project-card glass-panel">
+                    <div class="project-grid">
+                        <div class="project-info-col">
+                            <span class="project-tag">Supply Chain & Inventory</span>
+                            <h3 class="project-title">Supply Chain & Logistics Analytics Dashboard</h3>
+                            
+                            <p class="project-summary">
+                                High-impact Power BI dashboard analyzing $2.5B in total revenue, evaluating supplier delivery delays (averaging 5.48 days), 
+                                tracking top selling items (Camera 240K units), and monitoring inventory stock status.
+                            </p>
+
+                            <div class="project-metrics-row">
+                                <div class="metric-badge">
+                                    <span class="m-val">$2.5B</span>
+                                    <span class="m-lbl">Total Revenue</span>
+                                </div>
+                                <div class="metric-badge">
+                                    <span class="m-val">$4.1M</span>
+                                    <span class="m-lbl">Total Profit</span>
+                                </div>
+                                <div class="metric-badge">
+                                    <span class="m-val">5.48 Days</span>
+                                    <span class="m-lbl">Avg Delivery Delay</span>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span>Power BI</span>
+                                <span>Supply Chain Analytics</span>
+                                <span>Supplier KPI Tracking</span>
+                                <span>Inventory Status</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <button class="btn-primary-glow btn-sm open-case-study" data-project="project-3">
+                                    <i class="fas fa-file-alt"></i> Read Case Study
+                                </button>
+                                <a href="https://github.com/skmushraf" target="_blank" class="btn-glass btn-sm">
+                                    <i class="fab fa-github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-preview-col">
+                            <div class="project-img-wrapper" data-project="project-3">
+                                <div class="chart-canvas-preview">
+                                    <canvas id="project3Chart"></canvas>
+                                </div>
+                                <div class="project-hover-overlay">
+                                    <span><i class="fas fa-search-plus"></i> View Dashboard Details</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Certifications Section -->
+    <section id="certifications" class="section-padding certs-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">ACADEMIC & INDUSTRY CREDENTIALS</span>
+                <h2 class="section-title">Certifications & <span class="gradient-text">Simulations</span></h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="certs-grid">
+                <!-- Cert 1: Deloitte -->
+                <div class="cert-card glass-panel" data-cert="deloitte">
+                    <div class="cert-img-container">
+                        <img src="certificate.jpg" alt="Deloitte Data Analytics Certificate" onerror="this.src='https://via.placeholder.com/300x200?text=Deloitte+Certificate'">
+                        <div class="cert-overlay"><i class="fas fa-expand-alt"></i> View Certificate</div>
+                    </div>
+                    <div class="cert-details">
+                        <span class="cert-issuer">Deloitte & Forage</span>
+                        <h4>Data Analytics Job Simulation</h4>
+                        <p class="cert-date"><i class="far fa-calendar-alt"></i> April 5th, 2026</p>
+                        <p class="cert-tags">Data Analysis &bull; Forensic Technology &bull; Customer Segmentation</p>
+                    </div>
+                </div>
+
+                <!-- Cert 2: Cisco -->
+                <div class="cert-card glass-panel" data-cert="cisco">
+                    <div class="cert-img-container">
+                        <img src="cisco-certificate.jpg" alt="Cisco Data Analytics Essentials Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="cert-placeholder-visual cisco-bg" style="display:none;">
+                            <i class="fas fa-network-wired"></i>
+                            <span>CISCO</span>
+                        </div>
+                        <div class="cert-overlay"><i class="fas fa-expand-alt"></i> View Certificate</div>
+                    </div>
+                    <div class="cert-details">
+                        <span class="cert-issuer">Cisco Networking Academy</span>
+                        <h4>Data Analytics Essentials</h4>
+                        <p class="cert-date"><i class="far fa-calendar-alt"></i> 05 Jul 2026 &bull; Cert ID: 9dc929f1</p>
+                        <p class="cert-tags">Networking Academy &bull; Data Gathering &bull; Analytics Insights</p>
+                    </div>
+                </div>
+
+                <!-- Cert 3: be10x -->
+                <div class="cert-card glass-panel" data-cert="be10x">
+                    <div class="cert-img-container">
+                        <img src="be10x-certificate.jpg" alt="be10x AI Tools Workshop Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="cert-placeholder-visual ai-bg" style="display:none;">
+                            <i class="fas fa-robot"></i>
+                            <span>BE10X</span>
+                        </div>
+                        <div class="cert-overlay"><i class="fas fa-expand-alt"></i> View Certificate</div>
+                    </div>
+                    <div class="cert-details">
+                        <span class="cert-issuer">be10x (Verified)</span>
+                        <h4>AI Tools & ChatGPT Workshop</h4>
+                        <p class="cert-date"><i class="far fa-calendar-alt"></i> June 29th, 2025</p>
+                        <p class="cert-tags">AI Data Analysis &bull; AI Coding & Debugging &bull; AI Presentations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. GitHub Feed Section -->
+    <section id="github" class="section-padding github-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">LIVE CODE REPOSITORIES</span>
+                <h2 class="section-title">GitHub Student <span class="gradient-text">Activity</span></h2>
+                <p class="section-desc">Live project repositories fetched directly from <strong>github.com/skmushraf</strong>.</p>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="github-container glass-panel">
+                <div class="github-user-bar">
+                    <div class="gh-user-info">
+                        <i class="fab fa-github gh-main-icon"></i>
+                        <div>
+                            <h3 id="ghName">Shaik Mohammad Mushraf</h3>
+                            <a href="https://github.com/skmushraf" target="_blank" class="gh-handle">@skmushraf</a>
+                        </div>
+                    </div>
+                    <div class="gh-stats-row">
+                        <div class="gh-stat-chip"><span id="ghReposCount">-</span> Public Repos</div>
+                        <div class="gh-stat-chip"><span id="ghFollowersCount">-</span> Followers</div>
+                    </div>
+                </div>
+
+                <div class="github-repos-grid" id="ghReposGrid">
+                    <!-- Dynamic GitHub Repositories Loaded via JS -->
+                    <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Fetching Live GitHub Data...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Contact Section -->
+    <section id="contact" class="section-padding contact-section">
+        <div class="container">
+            <div class="glass-panel contact-wrapper">
+                <div class="contact-grid">
+                    <div class="contact-info-col">
+                        <span class="section-subtitle">GET IN TOUCH</span>
+                        <h2 class="section-title">Let's Connect & <span class="gradient-text">Collaborate</span></h2>
+                        <p class="contact-lead">
+                            Interested in discussing a data analytics project, academic research, or general networking? 
+                            Feel free to drop a message!
+                        </p>
+
+                        <div class="contact-details-list">
+                            <div class="c-detail-item">
+                                <div class="c-icon"><i class="fas fa-user"></i></div>
+                                <div>
+                                    <span class="c-lbl">Name</span>
+                                    <span class="c-val">Shaik Mohammad Mushraf</span>
+                                </div>
+                            </div>
+                            <div class="c-detail-item">
+                                <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <span class="c-lbl">Email</span>
+                                    <a href="mailto:shaikmushraf48@gmail.com" class="c-val link">shaikmushraf48@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="c-detail-item">
+                                <div class="c-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div>
+                                    <span class="c-lbl">Phone / WhatsApp</span>
+                                    <a href="tel:+919398845539" class="c-val link">+91 9398845539</a>
+                                </div>
+                            </div>
+                            <div class="c-detail-item">
+                                <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <span class="c-lbl">Location</span>
+                                    <span class="c-val">India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-connect-bar">
+                            <span>Connect:</span>
+                            <a href="https://github.com/skmushraf" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/sk-mohammad-mushraf-b070922a7" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:shaikmushraf48@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-col">
+                        <form class="hire-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="c_name">Your Name *</label>
+                                    <input type="text" id="c_name" required placeholder="e.g. Alex Rivera">
+                                </div>
+                                <div class="form-group">
+                                    <label for="c_email">Email Address *</label>
+                                    <input type="email" id="c_email" required placeholder="alex@example.com">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="c_phone">Contact Number</label>
+                                    <input type="tel" id="c_phone" placeholder="+91 98765 43210">
+                                </div>
+                                <div class="form-group">
+                                    <label for="c_company">Subject / Topic</label>
+                                    <input type="text" id="c_company" placeholder="e.g. Data Project / Collaboration">
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="c_requirements">Message / Discussion Details *</label>
+                                <textarea id="c_requirements" rows="5" required placeholder="Write your message or inquiry here..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary-glow submit-btn" id="submitBtn">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-mark">S</span>
+                    <span class="logo-text">Shaik Mushraf<span class="logo-dot">.</span></span>
+                </a>
+                <p>Transforming Data into Meaningful Insights.</p>
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="footer-social-icons">
+                <a href="https://github.com/skmushraf" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sk-mohammad-mushraf-b070922a7" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:shaikmushraf48@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="container">
+                <p>&copy; 2026 Shaik Mohammad Mushraf. AI & ML Student & Data Analyst Portfolio.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Case Study Modal Backdrop -->
+    <div class="modal-backdrop" id="caseStudyModal">
+        <div class="modal-card glass-panel">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js?v=3"></script>
+</body>
+
+</html>
