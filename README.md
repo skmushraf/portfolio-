@@ -286,4 +286,4 @@ The responsive layout ensures that navigation, project cards, content sections, 
 Clone the repository:
 
 ```bash
-git clone <YOUR-PORTFOLIO-REPOSITORY-URL>
+git clone <(https://github.com/skmushraf/portfolio-/tree/main)>
